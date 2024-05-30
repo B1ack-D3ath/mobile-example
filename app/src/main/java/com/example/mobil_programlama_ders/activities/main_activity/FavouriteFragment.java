@@ -27,13 +27,10 @@ public class FavouriteFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_favourite, container, false);
-    }
-
-    @Override
-    public void onViewCreated(View view,Bundle savedInstanceState){
+        View view = inflater.inflate(R.layout.fragment_favourite, container, false);
         initComponents(view);
         registerEventHandler();
+        return view;
     }
 
     private void initComponents(View view){
@@ -42,6 +39,10 @@ public class FavouriteFragment extends Fragment {
     }
 
     private void registerEventHandler(){
+        buttonFavourite_onClick();
+    }
+
+    private void buttonFavourite_onClick(){
         buttonFavourite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

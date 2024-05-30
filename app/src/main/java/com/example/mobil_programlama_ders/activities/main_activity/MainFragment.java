@@ -27,13 +27,10 @@ public class MainFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,Bundle savedInstanceState){
-        return inflater.inflate(R.layout.fragment_main,null);
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_main,null);
         initComponents(view);
         registerEventHandler();
+        return view;
     }
 
     private void initComponents(View view){
@@ -42,13 +39,16 @@ public class MainFragment extends Fragment {
     }
     
     private void registerEventHandler(){
+        blankButton_onClick();
+    }
+
+    private void blankButton_onClick(){
         blankButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "Butona Bastın", Toast.LENGTH_SHORT).show();
-                blankTextView.setText("Yarak");
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentView, SharedPreferenecesFragment.class, null)
+                        .replace(R.id.fragmentView, SharedPreferencesFragment.class, null)
                         .commit();
             }
         });

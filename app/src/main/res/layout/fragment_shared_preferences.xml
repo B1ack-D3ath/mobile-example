@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.main_activity.SharedPreferenecesFragment">
+    tools:context=".activities.main_activity.SharedPreferencesFragment">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/searchTextInputLayout"
+        android:id="@+id/sharedPreferencesTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
@@ -15,7 +15,7 @@
         android:padding="@dimen/padding"
         app:endIconMode="custom"
         app:endIconDrawable="@drawable/baseline_2k_24"
-        app:layout_constraintBottom_toTopOf="@+id/materialButton"
+        app:layout_constraintBottom_toTopOf="@+id/sharedPreferencesButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,12 +28,12 @@
 
     <com.google.android.material.button.MaterialButton
         style="@style/Widget.Material3.Button.ElevatedButton"
-        android:id="@+id/materialButton"
+        android:id="@+id/sharedPreferencesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Aktarmaların"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/searchTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/sharedPreferencesTextInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
