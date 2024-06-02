@@ -1,5 +1,7 @@
 package com.example.mobil_programlama_ders.activities.main_activity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +16,8 @@ import com.google.android.material.button.MaterialButton;
 
 public class MainFragment extends Fragment {
 
-    private TextView blankTextView;
-    private MaterialButton blankButton;
+    private TextView mainFragmentTextView;
+    private MaterialButton mainFragmentToFragmentButton,mainFragmentGetPreferencesValueButton;
 
     public MainFragment(){
     }
@@ -34,22 +36,34 @@ public class MainFragment extends Fragment {
     }
 
     private void initComponents(View view){
-        blankTextView = view.findViewById(R.id.blankTextView);
-        blankButton = view.findViewById(R.id.blankButton);
+        mainFragmentTextView = view.findViewById(R.id.mainFragmentTextView);
+        mainFragmentToFragmentButton = view.findViewById(R.id.mainFragmentToFragmentButton);
+        mainFragmentGetPreferencesValueButton = view.findViewById(R.id.mainFragmentGetPreferencesValueButton);
     }
     
     private void registerEventHandler(){
-        blankButton_onClick();
+        setMainFragmentToFragmentButton_OnClick();
+        setMainFragmentGetPreferencesValueButton_OnClick();
     }
 
-    private void blankButton_onClick(){
-        blankButton.setOnClickListener(new View.OnClickListener() {
+    private void setMainFragmentToFragmentButton_OnClick(){
+        mainFragmentToFragmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "Butona Bastın", Toast.LENGTH_SHORT).show();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragmentView, SharedPreferencesFragment.class, null)
                         .commit();
+            }
+        });
+    }
+
+    private void setMainFragmentGetPreferencesValueButton_OnClick(){
+        mainFragmentGetPreferencesValueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences preferences = getActivity().getPreferences(Context.MODE_PRIVATE);
+                    mainFragmentTextView.setText(preferences.getString("textInputLayout","Bulunamadi"));
             }
         });
     }

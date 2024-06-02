@@ -39,10 +39,11 @@ public class SharedPreferencesFragment extends Fragment {
     }
 
     private void registerEventHandler(){
-        sharedPreferencesTextInputLayout_endIconOnClick();
+        setSharedPreferencesTextInputLayout_endIconOnClick();
+        setSharedPreferencesButton_onClick();
     }
 
-    private void sharedPreferencesTextInputLayout_endIconOnClick(){
+    private void setSharedPreferencesTextInputLayout_endIconOnClick(){
         sharedPreferencesTextInputLayout.setEndIconOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +55,7 @@ public class SharedPreferencesFragment extends Fragment {
         });
     }
 
-    private void sharedPreferencesButton_onClick(){
+    private void setSharedPreferencesButton_onClick(){
         sharedPreferencesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

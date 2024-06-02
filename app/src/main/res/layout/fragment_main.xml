@@ -10,31 +10,45 @@
     tools:context=".activities.main_activity.MainFragment">
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/blankTextView"
+        android:id="@+id/mainFragmentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/blankButton"
         android:layout_margin="@dimen/margin"
-        android:padding="@dimen/padding"/>
+        android:padding="@dimen/padding"
+        android:text="@string/hello_blank_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/mainFragmentToFragmentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/mainFragmentToFragmentButton"
         style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-        android:id="@+id/blankButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/padding"
         android:text="Deneme"
         android:textSize="24sp"
-        app:icon="@drawable/baseline_10k_24"
-        app:layout_constraintTop_toBottomOf="@+id/blankTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:icon="@drawable/baseline_360_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="@dimen/margin"
-        android:padding="@dimen/padding"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainFragmentTextView"
+        app:layout_constraintEnd_toStartOf="@id/mainFragmentGetPreferencesValueButton"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mainFragmentGetPreferencesValueButton"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/padding"
+        android:text="Oku"
+        android:textSize="24sp"
+        app:icon="@drawable/baseline_markunread_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainFragmentToFragmentButton"
+        app:layout_constraintTop_toBottomOf="@+id/mainFragmentTextView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
