@@ -7,12 +7,13 @@
     tools:context=".activities.main_activity.SharedPreferencesFragment">
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
         android:id="@+id/sharedPreferencesTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
-        android:hint="Searh"
         android:padding="@dimen/padding"
+        android:hint="Searh"
         app:endIconMode="custom"
         app:endIconDrawable="@drawable/baseline_2k_24"
         app:layout_constraintBottom_toTopOf="@+id/sharedPreferencesButton"
@@ -22,8 +23,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton

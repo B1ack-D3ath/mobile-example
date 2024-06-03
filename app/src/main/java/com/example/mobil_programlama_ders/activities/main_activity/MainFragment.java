@@ -52,7 +52,7 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "Butona Bastın", Toast.LENGTH_SHORT).show();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentView, SharedPreferencesFragment.class, null)
+                        .replace(R.id.fragmentView, SqlLiteWriteFragment.class, null)
                         .commit();
             }
         });
