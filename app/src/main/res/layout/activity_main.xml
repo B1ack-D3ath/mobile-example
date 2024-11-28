@@ -23,19 +23,24 @@
             android:id="@+id/fragmentView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.2"/>
+            android:layout_weight="0.3"/>
 
         <!-- This code is used to show some texts -->
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.8"
+            android:layout_weight="0.6"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
             android:text="Welcome To GeeksForGeeks!"
             android:textSize="40sp" />
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

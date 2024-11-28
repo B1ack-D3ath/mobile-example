@@ -29,7 +29,7 @@ public class MainFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.fragment_main,null);
+        View view = inflater.inflate(R.layout.fragment_main,parent,false);
         initComponents(view);
         registerEventHandler();
         return view;

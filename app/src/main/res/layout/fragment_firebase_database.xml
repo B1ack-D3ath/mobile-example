@@ -8,7 +8,7 @@
     tools:context=".activities.main_activity.SqlLiteWriteFragment">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sqlWriteIsimTextInputLayout"
+        android:id="@+id/firebaseIsimTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/sqlWriteSoyisimTextInputLayout">
+        app:layout_constraintBottom_toTopOf="@id/firebaseSoyisimTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -25,16 +25,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sqlWriteSoyisimTextInputLayout"
+        android:id="@+id/firebaseSoyisimTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="5dp"
         android:hint="Soyisim"
-        app:layout_constraintTop_toBottomOf="@id/sqlWriteIsimTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/firebaseIsimTextInputLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/sqlWriteOgrenciNoTextInputLayout">
+        app:layout_constraintBottom_toTopOf="@id/firebaseOgrenciNoTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -42,16 +42,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sqlWriteOgrenciNoTextInputLayout"
+        android:id="@+id/firebaseOgrenciNoTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="5dp"
         android:hint="Ogrenci No"
-        app:layout_constraintTop_toBottomOf="@id/sqlWriteSoyisimTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/firebaseSoyisimTextInputLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/sqlWriteBolumSpinner">
+        app:layout_constraintBottom_toTopOf="@id/firebaseBolumSpinner">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -59,38 +59,38 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/sqlWriteBolumSpinner"
+        android:id="@+id/firebaseBolumSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="5dp"
         android:autofillHints="Bolum"
-        app:layout_constraintTop_toBottomOf="@id/sqlWriteOgrenciNoTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/firebaseOgrenciNoTextInputLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/sqlWriteMezunRadioGroup"/>
+        app:layout_constraintBottom_toTopOf="@id/firebaseMezunRadioGroup"/>
 
     <RadioGroup
-        android:id="@+id/sqlWriteMezunRadioGroup"
+        android:id="@+id/firebaseMezunRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="10dp"
         android:padding="5dp"
-        app:layout_constraintTop_toBottomOf="@id/sqlWriteBolumSpinner"
+        app:layout_constraintTop_toBottomOf="@id/firebaseBolumSpinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/sqlWriteOgrenciKaydetButton">
+        app:layout_constraintBottom_toTopOf="@id/firebaseOgrenciKaydetButton">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/sqlWriteMezunRadioGroupTrueButton"
+            android:id="@+id/firebaseMezunRadioGroupTrueButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mezun"
             android:layout_weight="1"/>
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/sqlWriteMezunRadioGroupFalseButton"
+            android:id="@+id/firebaseMezunRadioGroupFalseButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mezun Degil"
@@ -98,7 +98,7 @@
     </RadioGroup>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sqlWriteOgrenciKaydetButton"
+        android:id="@+id/firebaseOgrenciKaydetButton"
         style="@style/Widget.Material3.Button.OutlinedButton.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -107,13 +107,13 @@
         android:text="Kaydet"
         android:textSize="24sp"
         app:icon="@drawable/baseline_markunread_24"
-        app:layout_constraintTop_toBottomOf="@id/sqlWriteMezunRadioGroup"
+        app:layout_constraintTop_toBottomOf="@id/firebaseMezunRadioGroup"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/sqlWriteFragmentOutButton"
+        app:layout_constraintEnd_toStartOf="@id/firebaseFragmentOutButton"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sqlWriteFragmentOutButton"
+        android:id="@+id/firebaseFragmentOutButton"
         style="@style/Widget.Material3.Button.OutlinedButton.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -122,8 +122,23 @@
         android:text="Git"
         android:textSize="24sp"
         app:icon="@drawable/baseline_360_24"
-        app:layout_constraintTop_toBottomOf="@id/sqlWriteMezunRadioGroup"
-        app:layout_constraintStart_toEndOf="@id/sqlWriteOgrenciKaydetButton"
+        app:layout_constraintTop_toBottomOf="@id/firebaseMezunRadioGroup"
+        app:layout_constraintStart_toEndOf="@id/firebaseOgrenciKaydetButton"
+        app:layout_constraintEnd_toStartOf="@id/firebaseOgrenciSilButton"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/firebaseOgrenciSilButton"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/padding"
+        android:text="Sil"
+        android:textSize="24sp"
+        app:icon="@drawable/baseline_360_24"
+        app:layout_constraintTop_toBottomOf="@id/firebaseMezunRadioGroup"
+        app:layout_constraintStart_toEndOf="@id/firebaseFragmentOutButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
